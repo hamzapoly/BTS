@@ -1,0 +1,381 @@
+/* Styles base lecteurs de flux Éditions Francis Lefebvre */
+
+
+/* Reset tags */
+
+.efl_contenu h1, .efl_contenu h2, .efl_contenu h3, .efl_contenu h4, .efl_contenu h5, .efl_contenu h6, .efl_contenu p, .efl_contenu ul, .efl_contenu li, .efl_contenu_popin h1, .efl_contenu_popin h2, .efl_contenu_popin h3, .efl_contenu_popin h4, .efl_contenu_popin h5, .efl_contenu_popin h6, .efl_contenu_popin p, .efl_contenu_popin ul, .efl_contenu_popin li	{
+	text-align: left;
+}
+
+.efl_bloc ul	{
+	margin: 0 !important;
+	padding: 0;
+	list-style-type: none;
+}
+
+.efl_bloc li	{
+	list-style-type: none;
+}
+
+/* Mockup page */
+.container	{
+	position: relative;
+	width: 90%
+	margin: 20px auto;
+}
+
+.principal	{
+	float: left;
+	width: 74%;
+}
+
+.column	{
+	float: right;
+	width: 24%;
+	padding-top: 100px;
+}
+
+/* Tools Menu */
+.control-group .radio input{
+margin-top:2px;
+display:inline-block;
+}
+.control-group .radio label{
+margin-top:0;
+display:inline-block;
+}
+
+
+/* Blocs */
+
+.efl_bloc	{
+	position: relative;
+	width: 100%;
+	min-height: 250px;
+	overflow-y: auto;
+}
+
+.efl_bloc.empty	{
+	background: url(../img/gris/loading.gif) center center no-repeat transparent;
+}
+
+
+
+/* Menu dédié */
+
+.efl_menu	{
+	list-style-type: none;
+	padding: 0;
+	width: auto;
+	margin: 0 auto;
+}
+
+.efl_menu li	{
+	float: left;
+	margin-right: 5px;
+	padding: 5px 10px;
+}
+
+
+/* Menu tags */
+
+.efl_menu_tag .efl_menu_tags	{
+	position: relative;
+	padding: 0;
+	width: auto;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	z-index: 50;
+	clear:both;
+}
+
+.efl_menu_tag .efl_menu_tags li	{
+	position: relative;
+	float: left;
+	list-style-type: none;
+	margin-right: 10px;
+	padding: 0;
+	width: auto;
+	overflow: visible;
+}
+
+.efl_menu_tag .efl_menu_tags li a, .efl_menu_tag  .efl_menu_tags li span	{
+	display: block;
+	padding: 5px 10px;
+	color: #fff;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.efl_menu_tag .efl_menu_tags li ul	{
+	min-width: 100%;
+	position: relative;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+}
+*+html .efl_menu_tag .efl_menu_tags li ul	{
+	margin-top: -2px; /* IE7 */
+}
+
+.efl_menu_tag .efl_menu_tags li ul li	{
+	white-space: nowrap;
+	float: none;
+	display: none;
+	margin: 0;
+}
+*+html .efl_menu_tag .efl_menu_tags li ul li	{
+	margin-bottom: -2px; /* IE7 */
+	min-height: 0;
+	min-width: 250px;
+}
+
+.efl_menu_tag .efl_menu_tags li ul li.on	{
+	display: block;
+}
+
+.efl_menu_tag .efl_menu_tags input {
+margin:3px;
+}
+
+.efl_menu_tag .efl_menu_tags label.on {
+color: yellow;
+}
+
+.efl_menu_tag .efl_menu_tags label {
+	font-family: Arial, Verdana, Helvetica;
+	font-size: 11px;
+	margin:0;
+	display:inline-block;
+	padding:2px;
+	color:white;
+}
+
+/* Variante accordéon du menu tags */
+.efl_menu_tag .efl_menu_tags.accordeon	{
+	width: 250px;
+}
+
+.efl_menu_tag .efl_menu_tags.accordeon li	{
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+
+.efl_menu_tag .efl_menu_tags.accordeon li ul	{
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.efl_menu_tag .efl_menu_tags.accordeon li ul li	{
+	white-space: normal;
+}
+
+/* Menu tags avec zapette */
+
+.efl_menu_tag_zapette .efl_menu_tags li.efl_titre_groupe:last-child{
+margin: 5px 0 10px 5px;
+}
+.efl_menu_tag_zapette .efl_menu_tags .efl_titre_groupe a{
+color:black;
+font-size:100%;
+text-decoration:underline;
+}
+
+.efl_menu_tag_zapette .efl_menu_tags .efl_titre_groupe ul input{
+margin: 0 5px 3px 0;
+padding:0;
+}
+.efl_menu_tag_zapette .efl_menu_tags .efl_titre_groupe ul label{
+margin:0;
+padding:0;
+}
+.efl_menu_tag_zapette .efl_menu_tags .efl_titre_groupe ul input,
+.efl_menu_tag_zapette .efl_menu_tags .efl_titre_groupe ul label{
+display:inline-block;
+}
+
+.efl_menu_tag_zapette .efl_menu_tags .efl_titre_groupe ul{
+padding: 0 0 0 50px;
+}
+
+.efl_menu_tag_zapette .expanded .efl_titre_menutag{
+background-position: 0 5px;
+}
+
+.efl_menu_tag_zapette .efl_titre_menutag {
+display: block;
+background: url('../img/commun/pictoZapette.jpg') no-repeat 0 -70px;
+font-family: Verdana;
+font-size: 12px;
+color: black;
+font-weight: bold;
+margin: 0 0 0 26px;
+padding: 0 0 0 20px;
+height:24px;
+line-height:24px;
+}
+
+.efl_menu_tag_zapette .efl_menu_tags_title {
+display: block;
+padding: 0px 7px;
+margin: 15px 0 13px 0;
+font-family: Verdana;
+font-size: 15px;
+color: black;
+font-weight: bold;
+}
+
+.efl_menu_tag_zapette .efl_menu_tags li ul {
+display:none;
+}
+
+/* Listes */
+
+.efl_bloc ul.liste	{
+	position: relative;
+	list-style-type: none;
+	margin: 10px 0;
+	padding: 0;
+}
+
+.efl_bloc ul.liste li	{
+	padding: 5px;
+	font-size: 12px;
+}
+
+.efl_bloc ul.liste li h3	{
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.efl_bloc ul.liste li h3 a	{
+	position: relative;
+}
+
+
+/* Contenu */
+.efl_contenu	{
+	min-height: 300px;
+}
+
+	.efl_contenu_popin .efl_contenu	{
+		min-height: 0;
+	}
+
+/* Iframe */
+.efl_iframe	{
+	width: 100%;
+	height: auto;
+	
+	overflow: auto;
+}
+
+/* Visuel */
+.efl_bloc .efl_bloc_visuel	{
+	float: left;
+	margin-right: 5px;
+}
+
+
+/* Menu de navigation préc. / accueil / suivant */
+
+ul.efl_nav	{
+	position: relative;
+	width: 120px;
+	height: 24px;
+	list-style-type: none;
+	left: 50%;
+	margin-left: -100px;
+}
+
+ul.efl_nav li	{
+	float: left;
+	width: 40px;
+}
+
+ul.efl_nav li a	{
+	display: block;
+	text-indent: -10000px;
+	width: 24px;
+	height: 24px;
+	margin: 0 8px;
+}
+
+ul.efl_nav li.efl_prec a	{
+	background: url(../img/gris/nav/nav_prev.png) center center no-repeat transparent;
+}
+
+ul.efl_nav li.efl_home a	{
+	background: url(../img/gris/nav/nav_home.png) center center no-repeat transparent;
+}
+
+ul.efl_nav li.efl_next a	{
+	background: url(../img/gris/nav/nav_next.png) center center no-repeat transparent;
+}
+
+
+	
+	
+	
+/* Pour Fancybox */
+
+/* Réglages z-index pourt couvrir éventuels frameworks d'interface */
+
+.fancybox-wrap	{
+	z-index: 3002;
+}
+
+#fancybox-overlay	{
+	z-index: 3001;
+}
+
+/* Dimensions */
+.efl_contenu_popin	{
+	min-height: 300px;
+	padding: 10px;
+}
+
+/* Plus éventuelle barre de scrollingbloc */
+.fancybox-inner	{
+	min-width: 820px;
+}
+
+/* Plus padding double */
+.fancybox-wrap	{
+	min-width: 824px;
+}
+
+
+
+/* Magic box */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+
+/* Debug */
+.testred	{
+	background-color: red !important;
+}
+
+/* Pagination */
+.efl_bloc ul.pagination {text-align:center;}
+.efl_bloc ul.pagination li {padding: 0 5px;}
+.efl_bloc ul.pagination li.current {font-weight:bold;}
+.efl_bloc ul.pagination li.others {cursor:pointer;}
+
+/* Picto agenda */
+span.picto_agenda_fiscal {background: url('../img/commun/agenda/pictoFiscal.png') no-repeat 0 0;width: 60px;display: block;}
+span.picto_agenda_social {background: url('../img/commun/agenda/pictoSocial.png') no-repeat 0 0;width: 60px;display: block;}
+span.picto_agenda_manif {background: url('../img/commun/agenda/pictoManif.png') no-repeat 0 0;width: 60px;display: block;}

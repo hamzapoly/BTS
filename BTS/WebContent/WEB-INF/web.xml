@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>BTS</display-name>
+  <servlet>
+    <servlet-name>authentification</servlet-name>
+    <servlet-class>com.bts.authentification.authentification</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>authentification</servlet-name>
+    <url-pattern>/authentification</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <servlet-name>authentificationuser</servlet-name>
+    <servlet-class>com.bts.authentification.authentificationuser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>authentificationuser</servlet-name>
+    <url-pattern>/authentificationuser</url-pattern>
+  </servlet-mapping>
+  
+  
+    
+  
+  
+  
+    <servlet>
+    <servlet-name>Ajout_User</servlet-name>
+    <servlet-class>com.bts.user.Ajout_User</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ajout_User</servlet-name>
+    <url-pattern>/Ajout_User</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Sup_User</servlet-name>
+    <servlet-class>com.bts.user.Sup_User</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Sup_User</servlet-name>
+    <url-pattern>/Sup_User</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Ajout_File</servlet-name>
+    <servlet-class>com.bts.fichier.Ajout_File</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ajout_File</servlet-name>
+    <url-pattern>/Ajout_File</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>vrt</servlet-name>
+    <servlet-class>com.bts.file.vrt</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>vrt</servlet-name>
+    <url-pattern>/vrt</url-pattern>
+  </servlet-mapping>
+  
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

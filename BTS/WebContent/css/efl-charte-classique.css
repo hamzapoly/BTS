@@ -1,0 +1,695 @@
+/* Style classique lecteurs de flux Éditions Francis Lefebvre */
+/* Vous pouvez modifier ces styles directement dans ce fichier */
+/* Nous vous conseillons toutefois de créer un fichier spécifique de surcharge, que vous appellerez en décommentant la dernière ligne du fichier my-efl.js */
+
+
+/* Blocs */
+
+.efl_bloc	{
+	overflow-x: hidden;
+}
+
+.efl_bloc *, .efl_contenu_popin *	{	
+	font-family: Georgia, "Times New Roman", Times !important;
+}
+
+.efl_bloc.empty	{
+	border: none;
+	background-image: url(../img/classique/loading.gif);
+	background-color: transparent;
+	/* Vous pouvez générer vos propres icônes d'animation à l'adresse suivante : http://preloaders.net/en/ */
+}
+
+
+/* Maqu */
+.column	{	padding-top: 0;}
+/* Fin maqu */
+
+.efl_bloc.efl_light, .efl_bloc.efl_popup	{
+	min-height: 120px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	/* Maqu */
+	margin-bottom: 50px;
+	/* Fin maqu */
+}
+
+
+/* Menu dédié */
+
+.efl_menu	{
+	position: relative;
+	text-align: center;
+	font-size: 13px;
+	width: 100%;
+	padding: 5px 0;
+	padding-left: 0 !important;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;	
+}
+
+.efl_menu li	{
+	background-color: #fff;
+	margin-right: 0;
+	width: 16.5%;
+	padding: 5px 0;
+}
+
+.efl_menu li a	{
+	color: #000;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.efl_menu li a:hover	{
+	color: #555;
+}
+
+.efl_menu li a.on	{
+	color: maroon;
+}
+
+
+/* Menu tags */
+
+.efl_bloc.efl_menu_tag .efl_menu_tags	{
+	font-size: 11px;
+	border-bottom: 1px solid #555;
+	margin-top: 0;
+	background-color: #fcfcfc;
+	text-align: left;
+	float: left;
+	padding-left: 0 !important;
+	width: 100%;
+	height: 24px;
+	margin-bottom: 30px !important;
+}
+
+.efl_menu_tag .efl_menu_tags li	{
+	width: 25%;
+	margin-right: 0;
+	font-size: 11px;
+}
+
+.efl_menu_tag .efl_menu_tags li:last-child	{
+	float: right;
+	width: 20%;
+	margin-right: 1%;
+	font-style: italic;
+}
+
+.efl_menu_tag .efl_menu_tags li a, .efl_menu_tag  .efl_menu_tags li span	{
+	color: #555;
+	text-decoration: none;
+	height: 14px;
+}
+
+.efl_menu_tag .efl_menu_tags li span	{
+	font-weight: bold;
+}
+
+.efl_menu_tag .efl_menu_tags li a:hover	{
+	color: maroon;
+	background-color: #fcfcfc;
+}
+
+.efl_menu_tag .efl_menu_tags li a.on, .efl_menu_tags li span.on	{
+	color: maroon;
+	background-color: #fcfcfc;
+}
+
+.efl_menu_tag .efl_menu_tags li span.on	{
+	background-color: transparent;
+}
+
+.efl_menu_tag .efl_menu_tags li ul	{
+	border: 1px solid #555;
+	border-top: none;
+	margin-left: 10px;
+	background-color: #fcfcfc;
+	z-index: 1;
+	border-bottom: none;
+}
+
+.efl_menu_tag .efl_menu_tags li.on ul	{
+	z-index: 50;
+	border-bottom: 1px solid #555;
+}
+
+.efl_menu_tag .efl_menu_tags li:hover ul	{
+	z-index: 60;
+	border-bottom: 1px solid #555;
+}
+
+.efl_menu_tag .efl_menu_tags li li	{
+	width: 100%;
+	background-color: #fff;
+}
+
+	.efl_menu_tag  .efl_menu_tags li li:last-child	{
+		float: left;
+		width: 100%;
+		font-style: normal;
+	}
+	
+	.efl_menu_tag  .efl_menu_tags li.on ul li	{
+		border-bottom: none;
+	}
+
+
+/* Menu accordéon */
+
+.efl_menu_tags.accordeon	{
+	position: relative;
+	float: right;
+	height: 1px;
+	overflow: visible;
+	width: 100%;
+}
+
+.efl_bloc.efl_dedicated .efl_menu_tags.accordeon	{
+	width: 22%;
+	margin-right: 1%;
+	margin-top: 30px;
+	margin-bottom: -30px;
+}
+
+.efl_menu_tags.accordeon li	{
+	width: 100%;
+	border: 1px solid #555;
+	margin-top: -1px;
+}
+
+.efl_menu_tags.accordeon li a	{
+	white-space: normal;
+}
+
+.efl_menu_tags.accordeon li:last-child	{
+	float: left;
+	text-align: right;
+}
+
+.efl_menu_tags.accordeon li ul	{
+	border: none;
+	margin: 0;
+}
+
+.efl_menu_tags.accordeon li li	{
+	border: none;
+}
+
+.efl_menu_tags.accordeon li li:last-child	{
+	text-align: left;
+	float: none;
+}
+
+.efl_menu_tags.accordeon li li a	{
+	padding-left: 10px;
+}
+
+
+/* LISTES */
+
+.efl_bloc ul.liste	{
+	background-color: #fff;
+	margin-top: 20px;
+}
+
+.efl_bloc.efl_light ul.liste, .efl_bloc.efl_popup ul.liste	{
+	background-color: #fff;
+	margin: 0;
+}
+
+
+	
+/* Lignes liste, modes light et popup */
+.efl_bloc  ul.liste li	{
+	font-size: 13px;
+	color: #555;
+	width: 95%;
+	border-bottom: 1px solid #999;
+}
+
+.efl_bloc ul.liste li:last-child	{
+	border-bottom: none;
+}
+	
+	
+/* Lignes liste, mode dédié */
+/* Les titres se placent sur deux colonnes */
+.efl_bloc.efl_dedicated ul.liste li	{
+	width: 47%;
+	float: left;
+	clear: both;
+	padding-bottom: 15px;
+	border-bottom: none;
+}
+
+.efl_bloc.efl_dedicated  ul.liste li:nth-child(even)	{
+	float: right;
+	clear: none;
+}
+
+/* Correction en cas de présence d'accordéon */
+
+.efl_bloc.efl_dedicated.efl_menu_tag_accordeon  ul.liste li	{
+	width: 36%;
+	margin-right: 1%;
+}
+
+.efl_bloc.efl_dedicated.efl_menu_tag_accordeon  ul.liste li:nth-child(even)	{
+	float: left;
+}
+
+/* Correction si largeur du bloc inférieure à 350px */
+
+.efl_bloc.efl_dedicated.single ul.liste li	{
+	width: 95%;
+	float: none;
+	clear: both;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #999;
+}
+
+
+/* Correction en cas de présence d'accordéon */
+
+.efl_bloc.efl_dedicated.single.efl_menu_tag_accordeon  ul.liste li	{
+	width: 72%;
+	margin-right: 1%;
+}
+
+
+/*
+.efl_bloc.efl_dedicated.efl_menu_tag_accordeon  ul.liste li:nth-child(odd)	{
+	float: right;
+	clear: none;
+}
+.efl_bloc.efl_dedicated.efl_menu_tag_accordeon  ul.liste li:nth-child(even)	{
+	clear: both;
+	float: left;
+}
+.efl_bloc.efl_dedicated.efl_menu_tag_accordeon  ul.liste li:first-child	{
+	float: left;
+	clear: both;
+	padding-right: 50%;
+	min-height: 120px;
+}
+.efl_bloc.efl_dedicated.efl_menu_tag_accordeon  ul.liste li:first-child + li	{
+	float: left;
+	clear: right;
+}
+	
+*/
+
+/* Mise en forme des éléments de liste */
+	
+.efl_bloc ul.liste li h3	{
+	font-size: 16px;
+	color: #000;
+	margin-bottom: 5px;
+}
+
+	.efl_bloc.efl_light ul.liste li h3, .efl_bloc.efl_popup ul.liste li h3	{
+		font-size: 14px;
+	}
+	
+
+.efl_bloc ul.liste li h3 a	{
+	color: #000;
+	text-decoration: none;
+}
+
+.efl_bloc ul.liste li h3 a:hover	{
+	color: maroon;
+}
+
+.efl_bloc ul.liste .efl_bloc_visuel	{
+	max-width: 50%;
+	position: relative; float: left;
+	margin-top: 3px;
+}
+
+.efl_bloc ul.liste .efl_bloc_visuel img	{
+	position: relative;
+	max-width: 100%;
+}
+
+.efl_bloc ul.liste li p	{
+	font-family: Arial, Helvetica, Verdana, sans-serif !important;
+	margin: 0;
+	line-height: 16px;
+	font-size: 13px;
+}
+
+	.efl_bloc.efl_light ul.liste li p, .efl_bloc.efl_popup ul.liste li p	{
+		margin-bottom: 5px;
+	}
+
+.efl_bloc ul.liste li p.efl_date	{
+	font-style: italic;
+	margin-right: 3px;
+	margin-bottom: 0 !important;
+	float: left;
+}
+
+	.efl_bloc.efl_light ul.liste li p.efl_date, .efl_bloc.efl_popup ul.liste li p.efl_date	{
+		margin-bottom: 0;
+		font-style: normal;
+	}
+
+.efl_bloc ul.liste li p.efl_date:after {	content:" - ";}
+.efl_bloc.efl_non_chapo ul.liste li p.efl_date:after {	content:" ";}
+
+.efl_bloc ul.liste li p.efl_chapo	{
+	text-align: justify;
+}
+
+
+/* Contenu affiché individuellement */
+
+.efl_contenu	{
+	position: relative;
+	clear: both;
+}
+
+.efl_contenu a, .efl_contenu_popin a	{
+	color: #069;
+}
+
+.efl_contenu .efl_bloc_visuel, .efl_contenu_popin .efl_bloc_visuel	{
+	padding: 4px;
+	padding-bottom: 0;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	margin-right: 15px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.efl_contenu .efl_bloc_visuel img, .efl_contenu_popin .efl_bloc_visuel img	{
+	margin-bottom: 0px;
+}
+
+.efl_contenu h1, .efl_contenu_popin h1	{
+	font-size: 18px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+
+.efl_contenu h2, .efl_contenu_popin h2	{
+	font-size: 16px;
+	margin-bottom: 8px;
+}
+
+.efl_contenu h3, .efl_contenu_popin h3	{
+	font-size: 20px;
+	margin-bottom: 7px;
+}
+
+.efl_contenu .pnum h3, .efl_contenu_popin .pnum h3	{
+	font-size: 15px;
+}
+
+.efl_contenu p, .efl_contenu ul,  .efl_contenu table, .efl_contenu_popin p, .efl_contenu_popin ul,  .efl_contenu_popin table	{
+	font-family: Arial, Helvetica, Verdana, sans-serif !important;
+	text-align: justify;
+	font-size: 13px;
+}
+
+.efl_contenu p.chapo, .efl_contenu_popin p.chapo	{
+	font-size: 14px;
+	font-style: italic;
+}
+
+.efl_contenu p.efl_date, .efl_contenu_popin p.efl_date	{
+	margin-top: 0;
+}
+
+.efl_contenu .pnum, .efl_contenu_popin .pnum	{
+	margin-bottom: 40px;
+}
+
+.efl_contenu table, .efl_contenu_popin table	{
+	margin: 10px;
+	border-collapse: collapse;
+}
+
+.efl_contenu table caption, .efl_contenu_popin table caption	{
+	padding: 10px;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.efl_contenu table td, .efl_contenu_popin table td	{
+	border: 1px solid #ccc;
+	margin: 0;
+	padding: 3px;
+}
+
+.ix_aligncenter p	{
+	text-align: center !important;
+}
+
+.ix_alignleft p	{
+	text-align: left !important;
+}
+
+.ix_alignright p	{
+	text-align: right !important;
+}
+
+.ix_valignmiddle	{
+	vertical-align: middle;
+}
+
+.ix_valigntop	{
+	vertical-align: top;
+}
+
+.ix_valignbottom	{
+	vertical-align: bottom;
+}
+
+.efl_contenu table tfoot td, .efl_contenu_popin table tfoot td	{
+	border: none;
+	padding: 0;
+	font-size: 12px;
+}
+
+.efl_contenu table tfoot td strong, .efl_contenu_popin table tfoot td strong	{
+	float: left;
+	margin-right: 5px;
+}
+
+.efl_contenu table tfoot td p strong, .efl_contenu_popin table tfoot td p strong	{
+	float: none;
+}
+
+.efl_contenu table tfoot td p, .efl_contenu_popin table tfoot td p	{
+	font-size: 12px;
+}
+
+.efl_contenu .souspnum, .efl_contenu_popin .souspnum	{
+	margin: 20px;
+}
+
+.efl_contenu ul li p, .efl_contenu_popin ul li p	{
+	margin-top: 0;
+	margin-bottom: 3px;
+}
+
+
+/* Correction en cas de présence d'accordéon */
+
+.efl_bloc.efl_dedicated.efl_menu_tag_accordeon .efl_contenu	{
+	margin-top: 30px;
+	width: 75%;
+}
+
+.efl_bloc.efl_dedicated.efl_menu_tag_accordeon .efl_contenu .efl_bloc_visuel	{
+	margin-right: 5px;
+}
+
+
+/* Navigation entre articles */
+
+ul.efl_nav	{
+	float: right;
+	left: 0;
+}
+
+ul.efl_nav li.efl_prec a	{
+	background: url(../img/classique/nav/nav_prev.png) center center no-repeat transparent;
+}
+
+ul.efl_nav li.efl_home a	{
+	background: url(../img/classique/nav/nav_home.png) center center no-repeat transparent;
+}
+
+ul.efl_nav li.efl_next a	{
+	background: url(../img/classique/nav/nav_next.png) center center no-repeat transparent;
+}
+
+
+.efl_bloc.empty .efl_contenu *	{	display: none;}
+
+
+.efl_iframe	{
+	min-height: 400px;
+}
+
+
+/* Correctifs */
+
+/* IE9 */
+.efl_menu_tags	{
+	height: 22px \0/;
+}
+
+.efl_bloc.efl_dedicated.efl_menu_tag_accordeon ul.liste li	{
+	width: 36% \0/;
+	
+}
+
+
+/* IE8 et moins */
+.efl_menu_tags	{
+	height: 22px\9;
+}
+
+.efl_menu_tags li	{
+	width: 25%\9;
+}
+
+.efl_menu_tags li.on ul	{
+	z-index: 98\9;
+}
+
+.efl_bloc.efl_dedicated ul.liste li	{
+	clear: none\9;
+	min-height: 60px\9;
+}
+
+.efl_bloc.efl_dedicated ul.liste li.efl_li_actualite 	{
+	min-height: 150px\9;
+}
+
+.efl_bloc.efl_dedicated.efl_menu_tag_accordeon ul.liste li.efl_li_actualite	{
+	min-height: 200px\9;
+}
+
+/* IE7 */
+.efl_menu_tags	{
+	height: 22px !ie;
+}
+
+.efl_menu_tags li	{
+	width: 24% !ie;
+	height: 22px !ie;
+}
+
+.efl_menu_tags li.on	{
+	background-color: #fcfcfc !ie;
+}
+
+.efl_menu_tags li.on ul, .efl_menu_tags li:hover ul	{
+	border-bottom: 1px solid #555 !important !ie;
+}
+
+.efl_menu_tags li.on ul li.on	{
+	background-color: #FCFCFC !ie;
+}
+
+.efl_menu_tags li.efl_titre_groupe ul li	{
+	margin-bottom: 2px !ie;
+}
+
+.efl_menu_tags li.efl_titre_groupe + li.efl_titre_groupe + li.efl_titre_groupe + li.efl_titre_groupe	{
+	width: 20% !ie;
+	margin-right: 1% !ie;
+	font-style: italic !ie;
+	position: relative !ie;
+	float: right !ie;
+}
+
+.efl_menu_tags li.efl_titre_groupe + li.efl_titre_groupe + li.efl_titre_groupe + li.efl_titre_groupe ul	{
+	display: none !ie;
+}
+
+.efl_menu_tags li.efl_titre_groupe a:hover	{
+	background-color: transparent !ie;
+}
+.efl_menu_tags li.efl_titre_groupe li a:hover	{
+	background-color: #FCFCFC !ie;
+}
+
+/* Si accordéon */
+
+.efl_menu_tags.accordeon li	{
+	position: relative !ie;
+	width: 100% !ie;
+	height: auto !ie;
+	border-bottom: none !ie;
+	margin-bottom: -3px !ie;
+	padding: 1px !ie;
+}
+
+
+.efl_menu_tags.accordeon li ul	{
+	position: relative !ie;
+}
+
+.efl_menu_tags.accordeon li.on ul, .efl_menu_tags.accordeon li:hover ul	{
+	border-bottom: none !ie;
+}
+
+.efl_menu_tags.accordeon li ul li	{
+	position: relative !ie;
+	float: left !ie;
+	padding-right: 0 !ie;
+	width: 50% !ie;
+	background-color: transparent !ie;
+}
+
+.efl_menu_tags.accordeon li ul li a	{
+	position: relative !ie;
+	width: 55% !ie;
+	word-wrap: break-word !ie;
+}
+
+.efl_menu_tags.accordeon li.on ul li	{
+	background-color: transparent !ie;
+}
+
+
+.efl_menu_tags.accordeon li.efl_titre_groupe ul li	{
+	margin-bottom: 0 !ie;
+}
+
+.efl_menu_tags.accordeon li.efl_titre_groupe + li.efl_titre_groupe + li.efl_titre_groupe + li.efl_titre_groupe	{
+	width: 100% !ie;
+	text-align: right !ie;
+	float: left !ie;
+	border-bottom: 1px solid #555 !ie;
+}
+
+.efl_menu_tags.accordeon li.efl_titre_groupe a:hover	{
+	background-color: #FCFCFC !ie;
+}
+
+
+
+.efl_bloc.efl_light ul.liste li, .efl_bloc.efl_popup ul.liste li	{
+	border-bottom: none !ie;
+	border-top: 1px solid #999 !ie;
+}
+.efl_bloc.efl_light ul.liste li:first-child, .efl_bloc.efl_popup ul.liste li:first-child	{
+	margin-top: -1px !ie;
+}
+
+.efl_bloc.efl_dedicated ul.liste li.efl_li_actualite 	{
+
+}
