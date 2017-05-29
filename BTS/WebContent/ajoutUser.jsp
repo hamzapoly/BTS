@@ -252,7 +252,7 @@ BODY {
 
 <div class="field required">
 						<p>
-							Mot de Passe:<br /> <input class="text" name="mot_pass"
+							Mot de Passe:<br /> <input type ="password" class="text" name="mot_pass"
 								id="recette_revau_mer" type="text" size="35" /><span class="iferror">Champ Obligatoire *</span>
 						</p>
 				</div>

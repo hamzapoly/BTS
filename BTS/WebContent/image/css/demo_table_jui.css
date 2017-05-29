@@ -72,7 +72,7 @@ table.display thead th div.DataTables_sort_wrapper span {
 	margin-left: -125px;
 	border: 1px solid #ddd;
 	text-align: center;
-	color: #999;
+	color: red;
 	font-size: 11px;
 	padding: 2px 0;
 }
@@ -86,7 +86,7 @@ table.display thead th div.DataTables_sort_wrapper span {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border: 1px solid #999999;
-	color: #909090;
+	color: red;
 	font-size: 12px;
 	padding: 2px;
 }
@@ -102,7 +102,7 @@ table.display thead th div.DataTables_sort_wrapper span {
 	-webkit-border-radius: 5px;
 	border: 1px solid #999999;
 	height: 21px;
-	color: #909090;
+	color: red;
 	font-size: 12px;
 	padding-left: 5px;
 }
@@ -190,15 +190,15 @@ table.display td.center {
 }
 
 table.display tr.odd {
-	background-color: #f8f8f8;
+	background-color: red;
 }
 
 table.display tr.even {
-	background-color: #fff;
+	background-color: red;
 }
 
 table.display tr:hover {
-	background-color: #e8eaef;
+	background-color: red;
 }
 
 table.display tr td {
@@ -211,7 +211,7 @@ table.display tr td {
 
 .top,.bottom {
 	padding: 15px;
-	background-color: #F5F5F5;
+	background-color: red;
 	border: 1px solid #CCCCCC;
 }
 
@@ -230,21 +230,21 @@ table.display tr td {
 tfoot input {
 	margin: 0.5em 0;
 	width: 100%;
-	color: #444;
+	color: red;
 }
 
 tfoot input.search_init {
-	color: #999;
+	color: red;
 }
 
 td.group {
-	background-color: #d1cfd0;
+	background-color: red;
 	border-bottom: 2px solid #A19B9E;
 	border-top: 2px solid #A19B9E;
 }
 
 td.details {
-	background-color: #d1cfd0;
+	background-color: red;
 	border: 2px solid #A19B9E;
 }
 
@@ -264,15 +264,15 @@ td.details {
 }
 
 .paging_full_numbers span.paginate_button {
-	background-color: #ddd;
+	background-color: red;
 }
 
 .paging_full_numbers span.paginate_button:hover {
-	background-color: #ccc;
+	background-color: red;
 }
 
 .paging_full_numbers span.paginate_active {
-	background-color: #99B3FF;
+	background-color: red;
 }
 
 .normal-t {
@@ -285,7 +285,7 @@ td.details {
 		repeat-x scroll 50% 50% #E6E6E6;
 	border-bottom: 1px solid #D3D3D3;
 	border-right: 1px #d3d3d3 solid;
-	color: #555555;
+	color: #0000ff;
 	font-weight: normal;
 	outline: medium none;
 }

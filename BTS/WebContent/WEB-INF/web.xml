@@ -62,7 +62,53 @@
     <url-pattern>/vrt</url-pattern>
   </servlet-mapping>
   
-
+  <servlet>
+    <servlet-name>Global_r</servlet-name>
+    <servlet-class>com.bts.consultation.Global_r</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Global_r</servlet-name>
+    <url-pattern>/Global_r</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>Global_e</servlet-name>
+    <servlet-class>com.bts.consultation.Global_e</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Global_e</servlet-name>
+    <url-pattern>/Global_e</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+   <servlet>
+    <servlet-name>detail_e</servlet-name>
+    <servlet-class>com.bts.consultation.detail_e</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>detail_e</servlet-name>
+    <url-pattern>/detail_e</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>detail_r</servlet-name>
+    <servlet-class>com.bts.consultation.detail_r</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>detail_r</servlet-name>
+    <url-pattern>/detail_r</url-pattern>
+  </servlet-mapping>
+      <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.bts.loginfilter.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -71,4 +117,5 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+    
 </web-app>

@@ -11,7 +11,7 @@ HTML - styles
 ============================================================================= */
 
 body {background-color:#eaeaea; color:#303030;}
-a {color:#0085cc;}
+a {color:#eaeaea;}
 a:hover, a:active, a:focus {color:#df0000;}
 #content h2 {color:#0085cc;}
 #content table {border:2px solid #cfcfcf;}
@@ -33,16 +33,7 @@ table.nostyle th, dl.nostyle dt {color:#303030 !important;}
 LAYOUT
 ============================================================================= */
 
-#tray {background-color:#303030; color:#cfcfcf;}
-#tray a, #tray strong {color:#fff;}
-#tray a:hover, #tray a:active, #tray a:focus {color:#b4e3ff;}
-#menu {background-color:#0085cc;}
-#menu ul li a {background-color:#fff; color:#303030;}
-#menu ul li a span {background-color:#FFF;}
-#menu ul li a:hover, #menu ul li a:active, #menu ul li a:focus, #menu ul li#menu-active a {background-color:#FFF; color:#df0000;}
-#menu ul li a:hover span, #menu ul li#menu-active a span {background-color:#FFF;}
-#menu ul li#menu-active a {color:#0085cc;}
-#menu ul.f-right a {color:#df0000;}
+
 #content {border:1px solid #afafaf; background:#fff;}
 #footer {color:#707070;}
 #footer a {color:#707070;}

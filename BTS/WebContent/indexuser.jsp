@@ -1,245 +1,221 @@
-
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@page language="java" import="java.util.*"%>
-<%@ page import="java.sql.*,java.io.*,java.util.*" %> 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<%@page language="java" import="java.io.*"%>
+<%@page language="java" import="java.sql.Date"%>
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<link rel="stylesheet" href="css/css3menu1/style.css" type="text/css" />
-<link rel="stylesheet" href="css/css3menu2/style.css" type="text/css" />
-<link rel="stylesheet" href="css/css3menu3/style.css" type="text/css" />
-<link rel="stylesheet" href="css/css3menu4/style.css" type="text/css" />
-<link rel="stylesheet" href="css/css3menu5/style.css" type="text/css" />
-<meta http-equiv="X-UA-Compatible" content="IE=7" />
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<meta name="robots" content="noindex,nofollow" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+ 	
+ 	<!-- WRITE YOUR CSS CODE HERE -->
+ 	<link rel="shortcut icon" href="faviconm.ico" type="image/x-icon">
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/css/reset.css" /> 
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/css/main.css" /> 
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/css/2col.css" title="2col" />
+	<link rel="alternate stylesheet" media="screen,projection" type="text/css" href="css/css/col1.css" title="col"/> 
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/css/mystyle.css" />	
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/css/style.css" />
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 	<script type="text/javascript" src="css/js/jquery2.js"></script>
+ 	<!-- <script type="text/javascript" src="css/js/jquery.js"></script>-->
+	<script type="text/javascript" src="css/js/switcher.js"></script>
+	<script type="text/javascript" src="css/js/toggle.js"></script>
+	<script type="text/javascript" src="css/js/ui.core.js"></script>
+	<script type="text/javascript" src="css/js/ui.tabs.js"></script>
+		<script>
+		$(document).ready(function(){
 
-<title>BTS</title>
-
-
- <link rel="shortcut icon" href="faviconm.ico" type="image/x-icon">
-
-
-<meta name="description" content="Flexible & User Friendly Admin skin" />
-<meta name="keywords"
-	content="Admin Panel, Backend Template, Admin Design, Dashboard, Admin Skin, Professional Admin Template, Beautiful admin panel interface" />
-
-<style type="text/css" media="all">
-@import url("image/css/style.css");
-
-@import url("image/css/visualize.css");
-
-@import url("image/css/date_input.css");
-
-@import url("image/css/jquery.minicolors.css");
-
-@import url("image/css/jquery.wysiwyg.css");
-
-@import url("image/css/jquery.fancybox.css");
-
-@import url("image/css/tipsy.css");
-
-@import "image/css/demo_table_jui.css";
-
-@import "image/css/jquery-ui-1.7.2.custom.css";
-</style>
-
-<!--[if lt IE 9]>
-	<style type="text/css" media="all"> @import url("image/css/ie.css"); </style>
-	<![endif]-->
-
-<script type="text/javascript" src="image/js/jquery-1.js"></script>
-<script type="text/javascript" src="image/js/highcharts.js"></script>
-<script type="text/javascript" src="image/js/exporting.js"></script>
-<!--FOR IMAGES-->
-<script type="text/javascript" src="image/js/graph-data.js"></script>
-
-<script type="text/javascript" src="image/js/jquery-1.3.2.js"></script>
-<script type="text/javascript" src="image/js/header-effect.js"></script>
-
-
-
-
+		$("#mailinput").focusin(function(){
+ 			$('.mail-icon').css({"display":"none"});		});
+		$("#mailinput").focusout(function(){
+ 			$('.mail-icon').css({"display":"block"});		});
+		$("#password").focusin(function(){
+ 			$('.pass-icon').css({"display":"none"});		});
+		$("#password").focusout(function(){
+ 			$('.pass-icon').css({"display":"block"});		});
+		});
+	</script>
+	<script>
+	function checkrole(){
+		$checked=$('input[name="selector"]:checked').attr('id');
+		if  (($checked=='Administrateur') && ($('input[type="text"]')!= "") && ($('input[type="password"]'!="")) )
+		{
+		   $('#f').attr('action', "/Task2/authentification");
+		   //$('#f').find('[type="submit"]').trigger('click');
+		   $('#f').submit();
+		}
+ 		else if  (($checked=="Utilisateur") && ($('input[type="text"]')!= "") && ($('input[type="password"]'!="")) )
+ 		   {$('#f').attr('action', "/Task2/authentificationuser");
+		   $('#f').submit();}	
+ 		else 
+			alert("Merci de choisir votre Role");
+	}
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(".tabs > ul").tabs();
+	});
+	</script>
+	 
+	 
+	<title>BTS</title>
 </head>
 
+
+
+
 <body>
+<div class="backgroundimg"></div>
 
-			<div id="header">
+<form id="f" action="/BTS/authentification" method="post">
+	<div id="main">
 
-		<h1>
-			<a href="#">LA Banque -BTS - Banque Tunisienne de Solidarité </a>
-		</h1>
+	<!-- Tray -->
+	<div id="tray" class="box" style="background-color:rgba(255,255,255,0.6)">
+		<img src="css/media/images/logo.png"  style="position:relative;z-index:1000"/><!-- Active -->
+				<!-- Menu -->
+		<div id="menu" class="box" style ="">
 
+	
 
-		<form action="#" method="post" class="searchform">
-			<input type="text" class="text" value="Search..." /> <img src="image/ch.jpg">
-		</form>
-
-
-		<div class="userprofile">
-			<ul>
-				<li><a href="#"><img src="image/supprimer.gif" />
-						<a href="index.jsp">Déconnexion</a>
-						 </li>
-					</ul>
-			 
-		 
 		</div>
-		<!-- .userprofile ends -->
+			<img src="css/media/images/logosibtel1.png" alt="" style="position:absolute;right:0"/>
+	</div>	
+		<!-- Active -->
+			<!--<p class="f-left box">  -->
 
+			<!-- Switcher -->
+			<!-- <span class="f-left" id="switcher">
+				<a href="#" rel="1col" class="styleswitch ico-col1" title="Display one column"><img src="css/design/switcher-1col.gif" alt="1 Column" /></a>
+				<a href="#" rel="2col" class="styleswitch ico-col2" title="Display two columns"><img src="css/design/switcher-2col.gif" alt="2 Columns" /></a>
+			</span>-->
 
+			 <strong></strong>
 
-	  <div class="userprofile"></div>
+		</p>
 
+	</div> <!--  /tray -->
+	<!-- <hr class="noscreen" />-->
 
-	  <div class="userprofile"></div>
+ <!-- /header -->
 
+	<!-- <hr class="noscreen" />-->
 
-	</div>
-	<!-- #header ends -->
+	<!-- Columns -->
+	<div id="cols" class="box" >
+		<!-- Aside (Left Column) -->
+	 <!-- /aside -->
 
+		<hr class="noscreen" />
 
+		<!-- Content (Right Column) -->
+		<!-- <div id="content" class="box">
 
-	<div class="clear"></div>
-
-
-	<div id="sidebar">
-
-	<ul id="css3menu5" class="topmenu">
-	
-	 
-	     
-	 	    <li class="topmenu"><a href="archiver.jsp" style="width:140px;"><img src="css/fch.png" alt="Fichier"/>Archiver Fichier</a></li>
-</ul>
-
-
-
-
-
-	</div>
-	<!-- #sidebar ends -->
-
-
-
-
-
-
-	<div id="content">
-
-		<!--<div class="breadcrumb">
-
-			<a href="#">Home</a> &raquo; <a href="#">Level 2</a> &raquo; <a href="#">Level 3</a> &raquo; Page navigation
-		</div>		<!-- .breadcrumb ends -->
-
-	<br></br>
-<br></br>
-
-
-
-
-
-<div class="textbox" style="border: 0px;">
-			<h3>Fichier Sibtel </h3>
-			  <div class="textbox_content" style="padding: 0px;">
-				<center>
-
-	
-			<table cellpadding="0" cellspacing="0" border="0"
-					class="display normal-t">
-					<thead>
-					
-				<tr>
-					<th width="35%" >Numéro Fichier</th>
-					
-					<th width="40%" >Nom Fichier</th>
-					
-				   <th>Validation
-					</th>
-					
-					<th>Télécharger
-					</th>
+			<h1>	<marquee>LA Banque -BTS - Banque Tunisienne de Solidarite</marquee>     </h1>
 			
-				</tr>
-					</thead>
-				<tbody>
-				<%
-	String name=request.getParameter("p1");
-	String connectionURL = "jdbc:mysql://localhost:3306/bts";
-	Connection con=null;
-	try{      
-		Class.forName("com.mysql.jdbc.Driver").newInstance();
-		con=DriverManager.getConnection(connectionURL,"root","");      
-		Statement stmt=con.createStatement();
-		String strQuery = "select * from fichier";
 
-		ResultSet rs = stmt.executeQuery(strQuery);
-		int sno=0;
-		while(rs.next())
-		{
-			sno++;
-			%>
-				<tr>
-					<td><%=rs.getInt(1) %></td>
-					<td><%=rs.getString(2)%></td>
+			
+
+			
+			
+
+			
+			
+			
 				
-				<td><a href="/sup_fichier?imgid=<%=rs.getInt(1)%>" width="5" height="5">Validation</td>
-				<td><a href="downloadfile.jsp?imgid=<%=rs.getInt(1)%>" width="5" height="5"><input type="image" src="css/js/dwn.jpg"/></a></td>
-					
-					
-				</tr>
-							<%
-		}
-		rs.close();
-		con.close();
-		stmt.close();
-	}
-	catch(Exception e)
-	{
-		e.getMessage();
-	}
-	%>
-			</tbody>
-		</table>
-	
-	
-	
-	
-	
-	
-			</div>
-
 
 		
+	
+			<fieldset>
+			<center>
+			<img src="icon/d.jpg" />
+			</center>
+			</fieldset>-->
+
+			<!-- Definition List -->
+			
+
+			<!-- Definition List -->
+	
+			<!-- <dl>
+				
+			</dl>
+
+		</div> --><!-- /content -->
+	</div> <!-- /cols -->
+
+	<hr class="noscreen" />
+	 <div style="BACKGROUND-COLOR: #ff00ff; COLOR: #aeaeff; margin:auto;margin-top:20px;border:4px solid rgba(10,10,10,0.6);height:350px;width:700px;z-index:1000;">
+	 
+	 <div class="logincmd" style="width:100%;height:20%;">
+	 <center>
+	 <table>
+	 <tr><td width="40%">
+	 <center>
+	 
+	 
+	<h2>
+		<b style="COLOR: #00ffff;"><a href="global_r.jsp" style="COLOR: #804040; BACKGROUND-COLOR:; FONT-FAMILY: 'Arial Black'; FONT-SIZE: xx-large; onclick="checkrole()" type="submit">Fichier Global</a></b>
+	</h2>
+	 </center>
+	<center>
+	 <img src="icon/envoi.png" style="height:130px;width:130px;left:0"></img>
+	 </center>
+	 	 <center>
+	 </td>
+	 <td width="10%"></td>
+	 <td>
+	<h2>
+		<b style="COLOR: #00ffff;"><a href="detail_r.jsp" style="COLOR: #804040; BACKGROUND-COLOR: ; FONT-FAMILY: 'Arial Black'; FONT-SIZE: xx-large; onclick="checkrole()" type="submit">Fichier Détaillé</a></b>
+	</h2>
+	 </center>
+	<center>
+	 <img src="icon/recu.png" style="height:130px;width:130px;left:0"></img>
+	 </center>
+	</td>
+	</tr>
+	 </table>
+	 </center>
+	 <br></br> <br></br> <br></br> <br></br> <br></br>
+	 <!-- <div class="login">-->
+	 </div>
+	
+	
+	
+	 
+	    
+  
+       
 
 
 
+	 
+	 </div>
+	 	
+	
+	
+	 </div>
 
+	<!-- Footer -->
+	<div id="footer" class="box">
 
+		<p class="f-left"><a href="#"></a>
 
-</div>
+		<p class="f-right"><a href="http://www.adminizio.com/"></a></p>
 
+	</div> <!-- /footer -->
 
-
-	<script type="text/javascript" src="image/js/jquery-ui.min.js"></script>
-
-	<script type="text/javascript" src="image/js/excanvas.js"></script>
-	<script type="text/javascript" src="image/js/jquery.visualize.js"></script>
-	<script type="text/javascript" src="image/js/jquery.tablesorter.js"></script>
-	<script type="text/javascript"
-		src="image/js/jquery.date_input.min.js"></script>
-	<!--input Date-->
-	<script type="text/javascript"
-		src="image/js/jquery.minicolors.min.js"></script>
-
-	<script type="text/javascript" src="image/js/jquery.wysiwyg.js"></script>
-	<script type="text/javascript" src="image/js/jquery.fancybox.js"></script>
-	<script type="text/javascript" src="image/js/jquery.tipsy.js"></script>
-	<script type="text/javascript" src="image/js/custom.js"></script>
-
-
-
+</div> <!-- /main -->
+</form>
 </body>
 </html>
+

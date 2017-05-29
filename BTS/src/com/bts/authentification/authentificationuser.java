@@ -33,16 +33,28 @@ public class authentificationuser extends HttpServlet {
 		res.setContentType("text/html;charset=UTF-8");
 	    req.setCharacterEncoding("UTF8");
 		PrintWriter out = res.getWriter();
-             
-	       
+
+        HttpSession session = req.getSession(true);
+		System.out.println(session.getAttribute("user"));
+
+             if (session.getAttribute("user")!=null)
+             {
+            	 	
+            		req.getRequestDispatcher("accueil.jsp").forward(req, res);
+             }
+             else 
+             { 
+            	 System.out.println("Bonjour Bonjour");
+                 String login=req.getParameter("user");
+            	 session.setAttribute("user", login);
                  boolean bol=false;
                  String log;
                  String pas;
                  Connection connexion = Maconnexion.seconnecter();
 
-               String login=req.getParameter("user");
-
-                String password=req.getParameter("pass");
+               String password=req.getParameter("pass");
+               
+               
               //String sql = "select login,password from operateur ";
 
               try {
@@ -59,12 +71,12 @@ public class authentificationuser extends HttpServlet {
                 {
                  bol=true;
              	
-                  dispatcher = req.getRequestDispatcher("archiver.jsp");
+                  dispatcher = req.getRequestDispatcher("accueil.jsp");
                       }
                  else{
 
-                	 JOptionPane.showMessageDialog(null, "Vérifier votre login et mot de passe");
-              dispatcher = req.getRequestDispatcher("loginuser.jsp");}
+              JOptionPane.showMessageDialog(null, "Vérifier votre login et mot de passe");
+              dispatcher = req.getRequestDispatcher("index.jsp");}
                  dispatcher.forward(req, res);
              }}
               catch (Exception e){
@@ -75,7 +87,7 @@ public class authentificationuser extends HttpServlet {
             
 	}
 }          
-
+}
  
 
 

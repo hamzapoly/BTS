@@ -8,6 +8,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+<!-- <link rel="stylesheet" href="css/css/main.css" type="text/css" />-->
+
 <link rel="stylesheet" href="css/css3menu1/style.css" type="text/css" />
 <link rel="stylesheet" href="css/css3menu2/style.css" type="text/css" />
 <link rel="stylesheet" href="css/css3menu3/style.css" type="text/css" />
@@ -67,11 +69,13 @@
 
 <body>
 
+
 			<div id="header">
 
 		<h1>
 			<a href="#">LA Banque -BTS - Banque Tunisienne de Solidarité </a>
 		</h1>
+
 
 
 		<form action="#" method="post" class="searchform">

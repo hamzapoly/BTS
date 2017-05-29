@@ -54,7 +54,6 @@ public class authentification extends HttpServlet {
                   {
                  log = resultat.getString(1);
                  pas=resultat.getString(2);
-
                 if(login.equals(log) && password.equals(pas))
                 {
                  bol=true;
@@ -63,10 +62,11 @@ public class authentification extends HttpServlet {
                       }
                  else{
 
-                	 JOptionPane.showMessageDialog(null, "Vérifier votre login et mot de passe");
+              JOptionPane.showMessageDialog(null, "Vérifier votre login et mot de passe");
               dispatcher = req.getRequestDispatcher("loginadmin.jsp");}
-                 dispatcher.forward(req, res);
-             }}
+                
+                 dispatcher.forward(req, res);}
+             }
               catch (Exception e){
                   // JOptionPane.showMessageDialog(this,"erreur: ");
                    // return 0;

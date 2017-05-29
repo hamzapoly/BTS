@@ -8,11 +8,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<link rel="stylesheet" href="css/css3menu1/style.css" type="text/css" />
-<link rel="stylesheet" href="css/css3menu2/style.css" type="text/css" />
-<link rel="stylesheet" href="css/css3menu3/style.css" type="text/css" />
-<link rel="stylesheet" href="css/css3menu4/style.css" type="text/css" />
-<link rel="stylesheet" href="css/css3menu5/style.css" type="text/css" />
 <meta http-equiv="X-UA-Compatible" content="IE=7" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -59,213 +54,187 @@
 
 <script type="text/javascript" src="image/js/jquery-1.3.2.js"></script>
 <script type="text/javascript" src="image/js/header-effect.js"></script>
+<style>
+#datepicker {
+  background:#3b8ec2 url(css/media/images/date.png)  97% 50% no-repeat ;
+  background-size:25px;
+  margin-left:10px;
+  font-size:15px;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  cursor:pointer;
+  
+}
+#datepicker::-webkit-inner-spin-button {
+  display: none;
+}
+#datepicker::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+input {
+  border: 2px solid #fe720a;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 3px 5px;
+  width: 140px;
+  margin-bottom:5px;
+}</style>
 
 
 
-
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/css/reset.css" /> 
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/css/main.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/css/2col.css" title="2col" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/css/style.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	 	<!-- <script type="text/javascript" src="js/accueilmenu.js"></script>-->
+	 			<script>
+	$(document).ready(function(){
+		var dt = new Date();  
+		// Display the month, day, and year. getMonth() returns a 0-based number.  
+		var month = dt.getMonth()+1;  
+		var day = dt.getDate();  
+		var year = dt.getFullYear();
+		var hour = dt.getHours();
+		var minute = dt.getMinutes();
+		$('#spandate').html(year + '-' + month + '-' + day );
+		$('#spantime').html(hour + ':'+ minute);
+		  });
+		</script>
+		<script>
+		$(document).ready(function() {
+			var path= window.location.pathname.split("/").pop();
+			});
+		</script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$(document.ready(function() {
+  $("#datepicker" ).datepicker({dateFormat:'yyyy-mm-dd'});
+}));
+</script>
+</script>
+<title>Accueil</title>
 </head>
-
 <body>
+<div class="backgroundimg"></div>
 
-			<div id="header">
+	<div id="main">
 
-		<h1>
-			<a href="#">LA Banque -BTS - Banque Tunisienne de Solidarité </a>
-		</h1>
-
-
-		<form action="#" method="post" class="searchform">
-			<input type="text" class="text" value="Search..." /> <img src="image/ch.jpg">
-		</form>
-
-
-		<div class="userprofile">
-			<ul>
-				<li><a href="#"><img src="image/supprimer.gif" />
-						<a href="index.jsp">Déconnexion</a>
-						 </li>
-					</ul>
-			 
-		 
-		</div>
-		<!-- .userprofile ends -->
-
-
-
-	  <div class="userprofile"></div>
-
-
-	  <div class="userprofile"></div>
-
-
-	</div>
-	<!-- #header ends -->
-
-
-
-	<div class="clear"></div>
-
-
-	<div id="sidebar">
-
-	<ul id="css3menu5" class="topmenu">
-		
-	  
-	     
-	 	    <li class="topmenu"><a href="archiver.jsp" style="width:140px;"><img src="css/fch.png" alt="Fichier"/>Archiver Fichier</a></li>
-</ul>
-
-
-
-
-
-	</div>
-	<!-- #sidebar ends -->
-
-
-
-
-
-
-	<div id="content">
-
-		<!--<div class="breadcrumb">
-
-			<a href="#">Home</a> &raquo; <a href="#">Level 2</a> &raquo; <a href="#">Level 3</a> &raquo; Page navigation
-		</div>		<!-- .breadcrumb ends -->
-
-		<ul id="crumbs">
-			<li><a href="archiver.jsp" style="width:140px;">Fichier Global</a><a href="#"></a></li>
-			<li><a href="detail.jsp" style="width:139px;">Fichier Détaillé </a><a href="#"></a></li>
-			<li><a href="http://localhost:8081/application_BCF_PFE/facture.jsp" style="width:140px;">Valeur Global</a></li>
-			<li><a href="http://localhost:8081/application_BCF_PFE/fichier.jsp" style="width:140px;"></a></li>
-			<li><a href="http://localhost:8081/application_BCF_PFE/contact.jsp" style="width:140px;"></a></li>
-			<li><a href="http://localhost:8081/application_BCF_PFE/message.jsp" style="width:120px;"></a>
+	<!-- Tray -->
+	<div id="tray" class="box" style="background-color:rgba(255,255,255,0.6);height:90px;margin-bottom:45px;">
+		<img src="css/media/images/logo.png"  style="position:relative;z-index:1000"/><!-- Active -->
+				<!-- Menu -->
+			<img src="css/media/images/logosibtel1.png" alt="" style="position:absolute;right:0;top:0"/>
+		<div id="menu">
+		<ul>
+			<li><a href="accueil.jsp">Accueil</a></li>
+			<li><a href="#">Fichiers</a>
+				<ul>
+					<li><a href="detail.jsp">Fichiers Détailés</a></li>
+					<li><a href="global.jsp">Fichiers Globales</a></li>				
+				</ul>
 			</li>
+			<li><a href="#">Situations</a>
+							<ul>
+					<li><a href="#">Situation Nette</a></li>
+					<li><a href="#">Compte Rendu</a></li>				
+				</ul></li>
+						<li><a href="index.jsp" class="decon">Déconnection</a></li>
 		</ul>
-<br></br>
-
-
-
-
-
-<div class="textbox" style="border: 0px;">
-			<h3>Fichier  Détaillé </h3>
-			  <div class="textbox_content" style="padding: 0px;">
-				<center>
-<img src="" />
-</center>
-	<center>
-		<h1></h1>
-		<img src="icon/y.jpg" style="width:100px;"/>
+		</div>
+	</div>	
+	</div> <!--  /tray -->
+	<div style="font-family: 'Josefin Sans', sans-serif;font-size:25px;height:50px;margin-left:20px;"><h2>Fichiers Détails</h2></div>
 	
-	</center>
-		<center>
-		<h1></h1>
-		<form method="post" action="http://localhost:8080/BTS/Ajout_File" enctype="multipart/form-data">
-			<table border="3">
-			<caption><h3>Chercher Votre fichier </h3></caption>
-				<tr>
-					<td>Code Valeur </td>
-					<td><input class="text" required="required" type="text" name="contenent" style="width: 94%" placeholder="saisissez donne"/></td>
-					</tr>
-					<tr>
-					<td>Sens </td>
-					<td><input class="text" required="required"  type="text" name="contenent" style="width: 94%" placeholder="saisissez donne"/></td>
-					</tr>
-						<tr> 
-					<td>Code D'enregistrement</td>
+<div class="container" style="position:absolute;height:auto;width:100%;margin-top:0px;background-color:rgba(0,0,0,0.8);">
+		
+		
+		<form  style="font-size:14px;font-family:'Lato', sans-serif;color:white;" method="post" action="/BTS/detail_r">
+	
+	<div id="searchingfilters">
+			 <div id="filter" >
+								<label for="sens"><span>*</span>Sens:</label>
+								<div class="styled-select blue">		
+								<select id ="sens" name="sens"  required="required">
+								<option value="2">Envoyé</option>
+								<option value="1" selected>Reçus</option>
+								</select>
+							
+
+								</div>
+			</div>
+			<div id="filter">
+													
+								<label for="codval"><span>*</span>Code Valeur:</label>
+      						    <div class="styled-select blue" >
+								<select id ="codval" name="codval"  required="required">
+								<option value="30">Cheque</option>
+							    <option value="10" selected>VRT</option>
+							    <option value="10" selected>PREL</option>
+							    <option value="10" selected>LC</option>
+							    <option value="10" selected>VRT</option>
+							    <option value="10" selected>VRT</option>
+							    </select>
+							    </div>
+			</div>					
 					
-				
-					<td><input class="text" required="required"  type="text" name="contenent" style="width: 94%" placeholder="saisissez donne"/></td>
-					</tr>
-					<tr>
-					<td>Date d'opération </td>
-					<td><input class="text" required="required"  type="text" name="contenent" style="width: 94%" placeholder="saisissez donne"/></td>
-				</tr>
-				<tr>
-					<td colspan="10">
-						<input type="submit" value="Chercher Votre Fichier" style="width: 100%">
-					</td>
-				</tr>
+								<!-- <label for="coden"></label>
+								<span>*</span>Code d'enregistrement<input name="coden" id="coden" type="text"class="text" size="15" value="0" onkeyup="remplir()" />
+								-->
 			
-			</table>
-		</form>
-	</center>
-	<hr>
+			
+			<div style="padding:5px;
+	margin:0 30px auto;
+	display:inline-block;
+	float:left;
+	width:30%;
+	">
+
+								<label for="date" style="float:left;"><span>*</span> Date d'Enregistrement:</label>
+      							<input type="date" id="datepicker" name="date">
+
+				  </div>
+						<input type="submit" id ="button1" class="submit" />
+	  </div>
+   </form>
+		
+		
+		
 			<table cellpadding="0" cellspacing="0" border="0"
-					class="display normal-t">
+					class="display normal-t" style="width:90%;position:relative;margin-top:50px;opacity:0.9;text-align:center;font-family:none;font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;">
 					<thead>
-					
+
 				<tr>
 				
 					
-					<th width="10%" >sens</th>
-						<th width="10%" >code valeur</th>
-							<th width="10%" >natrem</th>
-								<th width="10%" >codrem</th>
-									<th width="10%" >codcar</th>
-									
-										<th width="40%" >dateope</th>
-											<th width="40%" >numlot</th>
-												<th width="40%" >codeenr</th>
-													<th width="40%" >codedev</th>
-														<th width="40%" >rang</th>
-															<th width="40%" >mtot</th>
-																<th width="40%" >nbrtot</th>
-																	
+<th>	Sens	</th>
+<th>	Codval	</th>
+<th>	Natrem	</th>
+<th>	Codrem	</th>
+<th>	Codcar	</th>
+<th>	Date opération	</th>
+<th>	Numlot	</th>
+<th>	Code enregistrement	</th>
+<th>	Codedev	</th>
+<th>	Rang	</th>
+<th>	Monvir	</th>
+<th>	Numvir	</th>
+<th>	Ribdon	</th>
+<th>	Nomdon	</th>
+<th>	Coddes	</th>
+<th>	Ribben	</th>
+<th>	Nomben	</th>
+										
 					
 				  
 			
 				</tr>
 					</thead>
 				<tbody>
-				<%
-	String name=request.getParameter("p1");
-	String connectionURL = "jdbc:mysql://localhost:3306/bts";
-	Connection con=null;
-	try{      
-		Class.forName("com.mysql.jdbc.Driver").newInstance();
-		con=DriverManager.getConnection(connectionURL,"root","");      
-		Statement stmt=con.createStatement();
-		String strQuery = "select * from vrt_global";
-
-		ResultSet rs = stmt.executeQuery(strQuery);
-		int sno=0;
-		while(rs.next())
-		{
-			sno++;
-			%>
-				<tr>
-					<td><%=rs.getInt(1) %></td>
-					<td><%=rs.getInt(2)%></td>
-				<td><%=rs.getInt(3) %></td>
-					<td><%=rs.getInt(4)%></td>
-					<td><%=rs.getInt(5) %></td>
-					<td><%=rs.getString(6)%></td>
-					<td><%=rs.getInt(7) %></td>
-					<td><%=rs.getInt(8)%></td>
-					<td><%=rs.getInt(9) %></td>
-					<td><%=rs.getInt(10)%></td>
-					<td><%=rs.getInt(11) %></td>
-					<td><%=rs.getString(12)%></td>
-					
-					
-				
-					
-				</tr>
-							<%
-		}
-		rs.close();
-		con.close();
-		stmt.close();
-	}
-	catch(Exception e)
-	{
-		e.getMessage();
-	}
-	%>
-			</tbody>
+				<%=request.getParameter("str")%>
+				</tbody>
 		</table>
 	
 	
@@ -302,6 +271,31 @@
 	<script type="text/javascript" src="image/js/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="image/js/jquery.tipsy.js"></script>
 	<script type="text/javascript" src="image/js/custom.js"></script>
+	
+	</div>
+
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
